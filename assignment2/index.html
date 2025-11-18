@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Lucas Moon - Fall 2025 BWM 150 - Introduction </title>
+</head>
+
+<body>
+<h1><b>
+Understanding the Proper Way to Lay Out a Page with HTML5
+</h1></b>
+
+<h2>
+November 17, 2025
+By Lucas Moon
+</h2>
+
+<nav>
+<ul>
+<li><a href="index.html">HTML index</a></li>
+<li><a href="html5.html">HTML5</a></li>
+<li><a href="css3.html">CSS examples</a></li>
+<li><a href="related.html">Related Articles</a></li>
+</ul>
+</nav>
+
+<h3>
+INTRODUCTION
+</h3>
+<p>
+A web page being rendered in the browser consists of many things - logo, informative text, pictures, hyperlinks, navigational structure and more. HTML5 offers a set of markup elements that allow you to create a structured layout for web pages. These elements are often termed as Semantic Markup because they convey their meaning and purpose clearly to the developer and to the browser. This article discusses some of the important HTML5 elements that can contribute to the layout of a web page.
+</p>
+
+<h3>
+SEMANTIC MARKUP
+</h3>
+<p>
+Semantic markup expresses its meaning and purpose clearly to the developers and to the browser. Web developers frequently use the &lt;div&gt; element to layout their web pages. However, a &lt;div&gt; element by itself doesn't convey what it is representing in a web page. A &lt;div&gt; element may wrap a navigational menu or it may house a list of blog posts, but merely using &lt;div&gt; doesn't convey much information to the developers or to the browsers. Usually CSS classes applied to div elements reveal some information about their intended purpose. For example consider the following markup:
+
+&lt;div class="header"&gt;...&lt;/div&gt;
+
+In the above markup it is the header CSS class that gives you an idea as to what the &lt;div&gt; might be doing. In the absence of this CSS class, however, there is no way to easily identify what the &lt;div&gt; might be doing. This is because &lt;div&gt; is a general purpose element. It has no specific documented responsibility. It simply marks a division or section of the web page but doesn't dictate what can go inside that section.
+
+HTML5 includes a set of markup elements that overcome this difficulty. These new elements have meaningful names so that just by looking at these elements you get a clear idea about their content. These semantic elements of HTML5 are listed below (this is not an exhaustive list):
+</p>
+
+<ul>
+<li>header</li>
+<li>footer</li>
+<li>section</li>
+<li>article</li>
+<li>aside</li>
+<li>nav</li>
+</ul>
+
+<p>As you can see, these elements are quite expressive and you can immediately get an idea of the intended purpose. The following figure shows a sample page layout designed using these elements:</p>
+
+<center><img src="images/figure01.png" alt="[ Image was not able to load correctly ]"></center>
+<p>The above figure shows a typical arrangement of various elements. Note that their exact location on a page is purely dependent on the layout. For example, the &lt;aside&gt; element can be placed on the left hand side of the &lt;section&gt; or even above or below it.
+
+The following figure shows an actual web page making use of these elements:</p>
+
+<center><img src="images/figure02.png" alt="[ Image was not able to load correctly ]"></center>
+
+<p>Now that you have some idea about the semantic elements, let's discuss each of the elements in more detail. For the sake of our discussion we will use the above sample web page as an example.</p>
+
+<h3>
+HEADER ELEMENT
+</h3>
+
+The &lt;header&gt; element represents the header of the whole page or a section of it. The W3C specifications define the &lt;header&gt; element like this:
+
+The &lt;header&gt; element represents a group of introductory or navigational aids. A header element is intended to usually contain the section's heading, but this is not required. The header element can also be used to wrap a section's table of contents, a search form, or any relevant logos.
+
+The above explanation tells us that the &lt;header&gt; element can contain headings, logo images, supporting text and optionally a navigation structure. Most of the web pages have page headings in the form of logo, slogan and/or supportive text. The header element acts as a container for all these. Note that the header element can be used not only for the whole page but also for individual sections of a web page. For example, in addition to the page level header you may use the header element in the contact information section of the page.
+
+The following markup shows how the &lt;header&gt; element has been used in our example web page:</p>
+<center><img src="images/header.png" alt="[ Image was not able to load correctly ]"></center>
+<h3>
+NAV ELEMENT
+</h3>
+
+The &lt;nav&gt; element is intended to house navigation menus or any kind of navigational structure such as hyperlinks. The W3C specifications define the &lt;nav&gt; element like this:
+
+The &lt;nav&gt; element represents a section with navigation links.
+
+The &lt;nav&gt; section can contain links to the other pages from the website or to other parts of the same web page. It is recommended that you use &lt;nav&gt; only for the main navigational structures and not for minor set of hyperlinks (such as the ones that usually go in the footer of a web page).
+
+The following markup shows how the &lt;nav&gt; element has been used in the example web page:</p>
+
+<center><img src="images/nav.png" alt="[ Image was not able to load correctly ]"></center>
+<h3>
+SECTION ELEMENT
+</h3>
+
+<p>As per W3C specifications the &lt;section&gt; element represents a generic section of a document or application. The &lt;section&gt; element should not be confused with the &lt;div&gt; element. The &lt;section&gt; element is a thematic grouping of content whereas the &lt;div&gt; doesn't have any such restriction. The W3C specifications further clarifies - The section element is appropriate only if the contents would be listed explicitly in the document's outline. Some examples where a &lt;section&gt; element can be used include contact information section of a web page, announcement section of a web page and tabbed pages of a tabbed user interface. A section usually has some heading.
+
+The following markup shows how the &lt;section&gt; element looks:</p>
+
+<center><img src="images/section.png" alt="[ Image was not able to load correctly ]"></center>
+
+<p>A section can also have its own &lt;header&gt; elements as well as a &lt;footer&gt; element. The section element is analogous to a section of a printed book that contains chapters or a section of a newspaper that contains news items.
+
+<h3>
+ARTICLE ELEMENT
+</h3>
+
+<p>The &lt;article&gt; element represents an independent item section of content such as a blog post, forum post or a comment. It is expected that the content in the article element should be independently distributable or reusable as in the case of content syndication.
+
+The following markup shows how the &lt;article&gt; element looks:</p>
+
+<center><img src="images/article.png" alt="[ Image was not able to load correctly ]"></center>
+
+<p>You will find that people sometimes use &lt;section&gt; and &lt;article&gt; together or use nested &lt;article&gt; elements. Currently there are no rigid and precise rules dictating their nesting. Whenever you use them together try to ensure that the resultant structure meets the intended purpose of the respective element as given in the W3C specifications.
+</p>
+
+<h3>
+ASIDE ELEMENT
+</h3>
+
+The &lt;aside&gt; element is intended to house content that is related to the surrounding content but at the same time is a standalone piece of content in itself. If you take out the &lt;aside&gt; from the page it shouldn't change or alter the meaning or clarity of the main page content. Think of it as a sidebar that gives some extra, related yet standalone information about the topic being discussed. Some examples of &lt;aside&gt; include - extra information, related links and contextual advertisements. The &lt;aside&gt; element can house any type of content including textual information and images.
+
+For example, the &lt;aside&gt; used in the example web page looks like this:</p>
+
+<center><img src="images/aside.png" alt="[ Image was not able to load correctly ]"></center>
+<p>As you can see the &lt;aside&gt; element shown above contains a &lt;figure&gt; element and some text in the form of a &lt;p&gt; element. The &lt;figure&gt; element is intended to represent a figure and in turn contains &lt;img&gt; and &lt;figcaption&gt; element. The &lt;img&gt; tag points to the actual image to be displayed and the &lt;figcaption&gt; element holds the figure caption.
+</p>
+
+<h3>
+FOOTER ELEMENT
+</h3>
+
+<p>The &lt;footer&gt; element represents the footer of the whole page or a &lt;section&gt; element. It is intended to contain footer information such as copyright notice.
+
+The &lt;footer&gt; element of the example web page looks like this:</p>
+
+<center><img src="images/footer.png" alt="[ Image was not able to load correctly ]"></center>
+<h3>
+SUMMARY
+</h3>
+
+<!-- INSTRUCTIONS: Update this paragraph so that all semantics elements render correctly on the page. -->
+</p>This article covered semantic markup elements of HTML5 that can be used in the proper layout of the web pages. Unlike the <div> element, the semantic elements are intended to be used for a specific purpose. The elements we covered in this article include:</p>
+<ul>
+<li>header</li>
+<li>footer</li>
+<li>section</li>
+<li>article</li>
+<li>aside</li>
+<li>nav</li>
+</ul>
+
+<h4> 
+References:
+</h4>
+
+<h5>
+<cite>"Understanding the Proper Way to Lay Out a Page with HTML5." - Developer.com. N.p., n.d. Web. 10 Aug. 2014.</cite>
+</h5>
+
+Created by: Lucas Moon | <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJZdkhCBRWGgdXfkBHMtHNlGLZHXTswmvBqlZNkNQMZLwFHBbKWMtdHXkRjLbXKLZzWxjnV">lm400328@students.monroecti.org </a> | Copyright 2025
+</body>
+
+</html>
